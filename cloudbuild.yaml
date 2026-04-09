@@ -3,7 +3,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['pull', '${_DOCKER_IMAGE}']
   
-  # Tag the image for Google Container Registry
+  # Tag the image for Google Container Registry 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['tag', '${_DOCKER_IMAGE}', 'gcr.io/$PROJECT_ID/${_SERVICE_NAME}:$COMMIT_SHA']
   
